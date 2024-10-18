@@ -6,16 +6,6 @@ import yfinance as yf
 from datetime import datetime, timedelta
 import logging
 
-# Snowflake credentials
-SNOWFLAKE_CONFIG = {
-    "account": "svpfiiy-awb47013",
-    "user": "pranavss722",
-    "password": "AntKrumpMatteo2001!",
-    "warehouse": "COMPUTE_WH",
-    "database": "NAV1",
-    "schema": "PUBLIC"
-}
-
 def get_next_day(date_str: str) -> str:
     """Returns the next day for a given date string in 'YYYY-MM-DD' format."""
     date_obj = datetime.strptime(date_str, "%Y-%m-%d")
